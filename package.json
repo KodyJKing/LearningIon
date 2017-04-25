@@ -1,0 +1,15 @@
+{
+  "name": "learningvue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "yarn install",
+    "start": "node index.js"
+  },
+  "author": "Kody King",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
