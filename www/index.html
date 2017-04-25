@@ -24,14 +24,13 @@
         return template ->
             return Div()
                 Ul()
-                    for todo in todos
+                    for todo, index in todos
                         Li()
                             todo + ' '
                             Button()
                                 'Done'
                                 click(e) ->
-                                    todos.splice( todos.indexOf(todo) , 1)
-                
+                                    todos.splice( index , 1)
                 Br()
                 Input({id: 'task'})
                 Button()
