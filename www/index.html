@@ -1,11 +1,44 @@
-<!doctype html>
-<head>
-<script>
-    window.onload = function(){
-    }
-</script>
-</head>
-<body>
-
-</body>
+<html>
+   <head>
+       <title>Ion Sample</title>
+       <link rel="import" href="http://viewpath4.appspot.com/scripts.html">
+       <style>
+			li:nth-child(even) {
+				background-color: antiquewhite;
+			}
+			li {
+				border: 1px solid black;
+				padding: 5px;
+			}
+			ul {
+				border: 1px solid black;
+				min-width: 80px;
+				min-height: 25px;
+				display: inline-block;
+			}
+		</style>
+   </head>
+   <body>
+       <script type='ion'>
+        let todos = []
+        return template ->
+            return Div()
+                Ul()
+                    for todo in todos
+                        Li()
+                            todo + ' '
+                            Button()
+                                'Done'
+                                click(e) ->
+                                    todos.splice( todos.indexOf(todo) , 1)
+                
+                Br()
+                Input({id: 'task'})
+                Button()
+                    'Add'
+                    click(e) ->
+                        todos.push(task.value)
+                        task.value = ''
+       </script>
+   </body>
 </html>
